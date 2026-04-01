@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>À propos — Darelle Kamche Fotso</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .about-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;
+    padding: 0 4rem 3rem; max-width: 1100px; margin: 0 auto;
+  }
+  .about-text p { font-size: 1rem; line-height: 1.8; color: var(--muted); margin-bottom: 1.2rem; }
+  .about-cv-btn {
+    display: inline-flex; align-items: center; gap: 0.6rem;
+    padding: 0.85rem 1.8rem; background: var(--teal); color: white;
+    border: none; border-radius: 0.4rem;
+    font-family: 'DM Sans', sans-serif; font-size: 0.88rem; font-weight: 600;
+    cursor: pointer; text-decoration: none; transition: all 0.25s; margin-top: 1rem;
+  }
+  .about-cv-btn:hover {
+    background: var(--teal-light); transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(26,107,107,0.25);
+  }
+  .skills-col { display: flex; flex-direction: column; gap: 0.7rem; }
+  .timeline-section { padding: 0 4rem 3rem; max-width: 1100px; margin: 0 auto; }
+  .cert-area { padding: 0 4rem 3rem; max-width: 1100px; margin: 0 auto; }
+  .cert-placeholder {
+    border: 2px dashed rgba(201,168,76,0.4); border-radius: 0.8rem;
+    padding: 3rem; text-align: center; color: var(--muted); font-size: 0.9rem;
+    background: rgba(201,168,76,0.04);
+  }
+  .cert-placeholder p { margin-top: 0.5rem; font-size: 0.82rem; }
+  @media (max-width: 900px) {
+    .about-grid { grid-template-columns: 1fr; padding: 0 1.5rem 3rem; }
+    .timeline-section, .cert-area { padding-left: 1.5rem; padding-right: 1.5rem; }
+  }
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-logo">DKF<span>.</span></div>
+  <ul class="nav-links">
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="apropos.html">À propos</a></li>
+    <li><a href="bts.html">BTS SIO</a></li>
+    <li><a href="e5.html">Épreuve E5</a></li>
+    <li><a href="e6.html">Épreuve E6</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<main>
+  <div class="page-header">
+    <p class="page-label">// Qui suis-je ?</p>
+    <h1 class="page-title">À propos</h1>
+    <div class="page-line"></div>
+  </div>
+
+  <div class="about-grid">
+    <div class="about-text">
+      <p>Je m'appelle <strong>Darelle Kamche Fotso</strong>, étudiante en deuxième année de BTS SIO option SISR (Services Informatiques aux Organisations – spécialité Solutions d'Infrastructure, Systèmes et Réseaux).</p>
+      <p>Passionnée par les infrastructures informatiques, les réseaux et la cybersécurité, je souhaite me spécialiser dans l'administration systèmes et réseaux afin de contribuer à la gestion et à la sécurisation des systèmes d'information.</p>
+      <p>Au cours de ma formation et de mes expériences professionnelles, j'ai développé des compétences en support informatique, en administration systèmes Windows et Linux, ainsi qu'en gestion des réseaux.</p>
+      <p>Motivée, rigoureuse et curieuse, je suis constamment en recherche d'apprentissage afin de renforcer mes compétences techniques et évoluer dans le domaine de l'informatique.</p>
+      <a href="#" class="about-cv-btn" onclick="document.getElementById('cv-upload').click(); return false;">
+        📄 Télécharger mon CV
+      </a>
+      <input type="file" id="cv-upload" accept=".pdf" onchange="openCV(event)">
+    </div>
+
+    <div>
+      <h3 style="font-family:'Playfair Display',serif; font-size:1.25rem; font-weight:700; margin-bottom:1.2rem;">🛠️ Compétences</h3>
+      <div class="skills-col">
+        <div class="skill-tag"><div class="skill-cat">Systèmes</div><div class="skill-val">Windows 10/11, Windows Server, Linux (Debian, Ubuntu)</div></div>
+        <div class="skill-tag"><div class="skill-cat">Réseaux</div><div class="skill-val">TCP/IP, IPv4, DNS, DHCP, OSI</div></div>
+        <div class="skill-tag"><div class="skill-cat">Support</div><div class="skill-val">Support N1/N2, GLPI, gestion des incidents</div></div>
+        <div class="skill-tag"><div class="skill-cat">Virtualisation</div><div class="skill-val">VMware, Proxmox</div></div>
+        <div class="skill-tag"><div class="skill-cat">Sécurité</div><div class="skill-val">Droits d'accès, sauvegardes, mises à jour</div></div>
+        <div class="skill-tag"><div class="skill-cat">Développement</div><div class="skill-val">HTML, CSS, JavaScript, PHP, Python, SQL</div></div>
+        <div class="skill-tag"><div class="skill-cat">Outils</div><div class="skill-val">Git, GitHub, Intune, Office 365</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Expériences -->
+  <div class="timeline-section">
+    <h2 class="section-subtitle">💼 Expériences professionnelles</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="tl-title">Stagiaire Support Informatique</div>
+        <div class="tl-meta">EEMI, Paris · Novembre 2025 – Décembre 2025</div>
+        <ul class="tl-list">
+          <li>Support utilisateurs niveau 1 et 2 (gestion des incidents)</li>
+          <li>Installation et configuration de postes Windows</li>
+          <li>Maintenance du parc informatique</li>
+          <li>Assistance réseau (Wi-Fi, VLAN simples)</li>
+          <li>Gestion des comptes Active Directory</li>
+          <li>Rédaction de documentation technique</li>
+          <li>Sensibilisation à la sécurité informatique</li>
+        </ul>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-title">Stagiaire Support Informatique / Systèmes &amp; Réseaux</div>
+        <div class="tl-meta">Protectline, Noisy-le-Grand · Mai 2025 – Juillet 2025</div>
+        <ul class="tl-list">
+          <li>Support utilisateurs N1/N2</li>
+          <li>Diagnostic et résolution d'incidents matériels et logiciels</li>
+          <li>Migration de postes vers Windows 11</li>
+          <li>Gestion des comptes Active Directory</li>
+          <li>Déploiement via Microsoft Intune</li>
+          <li>Administration de serveurs Linux</li>
+          <li>Automatisation de tâches</li>
+          <li>Contribution à la sécurisation du système d'information</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Parcours académique -->
+  <div class="timeline-section">
+    <h2 class="section-subtitle">🎓 Parcours académique</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="tl-title">BTS SIO – Option SISR</div>
+        <div class="tl-meta">EFREI Paris · 2024 – 2026</div>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-title">Licence 1 Informatique</div>
+        <div class="tl-meta">Université de Yaoundé I · 2023 – 2024</div>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-title">Baccalauréat Scientifique (Mention Bien)</div>
+        <div class="tl-meta">Collège François Xavier Vogt · 2022 – 2023</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Certifications -->
+  <div class="cert-area">
+    <h2 class="section-subtitle">🏅 Certifications</h2>
+    <div class="cert-placeholder">
+      <span style="font-size:2rem;">📜</span>
+      <p>Espace dédié à mes certifications</p>
+      <p>Ajoutez ici vos certifications (ex : CCNA, Microsoft, CompTIA...)</p>
+    </div>
+  </div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

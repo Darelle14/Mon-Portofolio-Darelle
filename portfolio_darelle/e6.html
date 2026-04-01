@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Épreuve E6 — Darelle Kamche Fotso</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .projects-container {
+    padding: 0 4rem 3rem; max-width: 1100px; margin: 0 auto;
+    display: flex; flex-direction: column; gap: 4rem;
+  }
+  .project-card {
+    background: var(--card-bg); border: 1px solid rgba(255,255,255,0.6);
+    border-radius: 1rem; box-shadow: var(--shadow); overflow: hidden; transition: transform 0.3s;
+  }
+  .project-card:hover { transform: translateY(-6px); box-shadow: 0 20px 60px rgba(13,13,13,0.15); }
+  .project-header { padding: 2.5rem; background: var(--ink); color: var(--cream); }
+  .project-num {
+    font-family: 'DM Mono', monospace; font-size: 0.72rem;
+    letter-spacing: 0.15em; color: var(--gold-light); text-transform: uppercase; margin-bottom: 0.5rem;
+  }
+  .project-header h2 {
+    font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 700;
+    color: white; margin-bottom: 1rem;
+  }
+  .project-header p { font-size: 0.88rem; color: rgba(245,240,232,0.75); line-height: 1.7; }
+  .project-body { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0; }
+  .project-col { padding: 2rem 1.8rem; border-right: 1px solid var(--soft); }
+  .project-col:last-child { border-right: none; }
+  .project-col h4 {
+    font-family: 'DM Mono', monospace; font-size: 0.7rem;
+    letter-spacing: 0.12em; text-transform: uppercase; color: var(--teal); margin-bottom: 1rem;
+  }
+  .project-col ul { list-style: none; }
+  .project-col ul li {
+    font-size: 0.84rem; color: var(--muted);
+    padding: 0.3rem 0 0.3rem 1rem; position: relative; line-height: 1.5;
+  }
+  .project-col ul li::before { content: '·'; position: absolute; left: 0; color: var(--gold); font-size: 1.2rem; top: 0; }
+  .project-footer {
+    padding: 1.5rem 2rem; border-top: 1px solid var(--soft);
+    display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;
+  }
+  .project-footer p { font-size: 0.82rem; color: var(--muted); font-style: italic; }
+
+  .docs-section { padding: 0 4rem 3rem; max-width: 1100px; margin: 0 auto; }
+
+  @media (max-width: 900px) {
+    .projects-container, .docs-section { padding-left: 1.5rem; padding-right: 1.5rem; }
+    .project-body { grid-template-columns: 1fr; }
+    .project-col { border-right: none; border-bottom: 1px solid var(--soft); }
+    .project-col:last-child { border-bottom: none; }
+  }
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-logo">DKF<span>.</span></div>
+  <ul class="nav-links">
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="apropos.html">À propos</a></li>
+    <li><a href="bts.html">BTS SIO</a></li>
+    <li><a href="e5.html">Épreuve E5</a></li>
+    <li><a href="e6.html">Épreuve E6</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<main>
+  <div class="page-header">
+    <p class="page-label">// Réalisations</p>
+    <h1 class="page-title">🚀 Épreuve E6 — Projets</h1>
+    <div class="page-line"></div>
+  </div>
+
+  <div class="projects-container">
+    <!-- Projet 1 -->
+    <div class="project-card">
+      <div class="project-header">
+        <div class="project-num">// Projet 01</div>
+        <h2>Mise en place d'un serveur DHCP et DNS (Active Directory)</h2>
+        <p>Dans le cadre du projet M2L, mise en place d'une solution permettant d'automatiser la gestion des adresses IP et la résolution des noms dans un environnement comportant plusieurs VLAN.</p>
+      </div>
+      <div class="project-body">
+        <div class="project-col">
+          <h4>🎯 Objectifs</h4>
+          <ul>
+            <li>Automatiser l'attribution des adresses IP</li>
+            <li>Centraliser la gestion DNS</li>
+            <li>Assurer la continuité et la sécurité du réseau</li>
+          </ul>
+        </div>
+        <div class="project-col">
+          <h4>🛠️ Environnement</h4>
+          <div class="tech-tags">
+            <span class="tech-tag">Windows Server 2022</span>
+            <span class="tech-tag">Active Directory</span>
+            <span class="tech-tag">DHCP / DNS</span>
+            <span class="tech-tag">Proxmox</span>
+            <span class="tech-tag">Routeur Cisco</span>
+            <span class="tech-tag">Switch Catalyst</span>
+          </div>
+        </div>
+        <div class="project-col">
+          <h4>✅ Résultats</h4>
+          <ul>
+            <li>Attribution automatique des IP</li>
+            <li>Résolution DNS fonctionnelle</li>
+            <li>Réseau stable et sécurisé</li>
+            <li>Amélioration de la gestion réseau</li>
+          </ul>
+        </div>
+      </div>
+      <div class="project-footer">
+        <p>Fiche descriptive du projet 1</p>
+        <button class="btn-upload" onclick="document.getElementById('e6-p1').click()">📎 Ajouter la fiche descriptive</button>
+        <input type="file" id="e6-p1" accept=".pdf,.doc,.docx" onchange="attachFile(event)">
+      </div>
+    </div>
+
+    <!-- Projet 2 -->
+    <div class="project-card">
+      <div class="project-header">
+        <div class="project-num">// Projet 02</div>
+        <h2>Mise en place de GLPI avec FusionInventory</h2>
+        <p>La M2L ne disposait pas d'un outil efficace pour gérer son parc informatique et ses incidents. Mise en place d'une solution centralisée de ticketing et d'inventaire automatisé.</p>
+      </div>
+      <div class="project-body">
+        <div class="project-col">
+          <h4>🎯 Objectifs</h4>
+          <ul>
+            <li>Centraliser la gestion du parc</li>
+            <li>Automatiser l'inventaire</li>
+            <li>Mettre en place un système de ticketing</li>
+          </ul>
+        </div>
+        <div class="project-col">
+          <h4>🛠️ Environnement</h4>
+          <div class="tech-tags">
+            <span class="tech-tag">Debian</span>
+            <span class="tech-tag">GLPI</span>
+            <span class="tech-tag">FusionInventory</span>
+            <span class="tech-tag">Active Directory</span>
+            <span class="tech-tag">LAMP</span>
+          </div>
+        </div>
+        <div class="project-col">
+          <h4>✅ Résultats</h4>
+          <ul>
+            <li>Inventaire automatique des équipements</li>
+            <li>Centralisation des utilisateurs</li>
+            <li>Gestion efficace des incidents</li>
+            <li>Amélioration du suivi du parc</li>
+          </ul>
+        </div>
+      </div>
+      <div class="project-footer">
+        <p>Fiche descriptive du projet 2</p>
+        <button class="btn-upload" onclick="document.getElementById('e6-p2').click()">📎 Ajouter la fiche descriptive</button>
+        <input type="file" id="e6-p2" accept=".pdf,.doc,.docx" onchange="attachFile(event)">
+      </div>
+    </div>
+
+    <!-- Autres documents -->
+    <div>
+      <h2 class="section-subtitle">📂 Documents disponibles</h2>
+      <div class="doc-items">
+        <div class="doc-item">
+          <div><div class="doc-name">Schémas d'architecture</div><div class="doc-desc">Diagrammes des infrastructures mises en place</div></div>
+          <button class="btn-upload" onclick="document.getElementById('e6-schema').click()">📎 Ajouter</button>
+          <input type="file" id="e6-schema" accept=".pdf,.png,.jpg,.svg" onchange="attachFile(event)">
+        </div>
+        <div class="doc-item">
+          <div><div class="doc-name">Documentation technique</div><div class="doc-desc">Documentation complète des projets réalisés</div></div>
+          <button class="btn-upload" onclick="document.getElementById('e6-doc').click()">📎 Ajouter</button>
+          <input type="file" id="e6-doc" accept=".pdf,.doc,.docx" onchange="attachFile(event)">
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

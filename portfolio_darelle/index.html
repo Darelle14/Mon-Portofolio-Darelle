@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Darelle Kamche Fotso — Portfolio</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .hero {
+    min-height: 100vh;
+    display: flex; flex-direction: column; justify-content: center;
+    position: relative; overflow: hidden; padding-top: 80px;
+  }
+  .hero-bg {
+    position: absolute; inset: 0; z-index: 0;
+    background:
+      radial-gradient(ellipse 60% 80% at 80% 50%, rgba(201,168,76,0.12) 0%, transparent 70%),
+      radial-gradient(ellipse 50% 60% at 10% 80%, rgba(26,107,107,0.1) 0%, transparent 60%);
+  }
+  .hero-decor {
+    position: absolute; right: -60px; top: 50%; transform: translateY(-50%);
+    width: 520px; height: 520px; border-radius: 50%;
+    border: 1px solid rgba(201,168,76,0.2); z-index: 0;
+  }
+  .hero-decor::before {
+    content: ''; position: absolute; inset: 40px;
+    border-radius: 50%; border: 1px solid rgba(201,168,76,0.15);
+  }
+  .hero-decor::after {
+    content: ''; position: absolute; inset: 80px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(201,168,76,0.08), transparent 70%);
+  }
+  .hero-content {
+    position: relative; z-index: 1;
+    padding: 0 4rem; max-width: 760px;
+    animation: fadeUp 0.9s ease both;
+  }
+  .hero-tag {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    font-family: 'DM Mono', monospace; font-size: 0.75rem;
+    color: var(--teal); letter-spacing: 0.12em; text-transform: uppercase;
+    margin-bottom: 1.5rem; padding: 0.4rem 1rem;
+    border: 1px solid rgba(26,107,107,0.3); border-radius: 2rem;
+    background: rgba(26,107,107,0.06);
+  }
+  .hero-tag::before { content: '●'; font-size: 0.5rem; color: var(--teal); }
+  .hero-name {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(3rem, 7vw, 5.5rem); font-weight: 900;
+    line-height: 1.05; letter-spacing: -0.02em; margin-bottom: 0.5rem;
+  }
+  .hero-name em { font-style: italic; color: var(--gold); display: block; }
+  .hero-role {
+    font-family: 'DM Mono', monospace; font-size: 0.9rem;
+    color: var(--muted); letter-spacing: 0.05em; margin-bottom: 2rem;
+  }
+  .hero-desc {
+    font-size: 1.05rem; line-height: 1.75; color: var(--muted);
+    max-width: 560px; margin-bottom: 3rem;
+  }
+  .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
+  @media (max-width: 900px) {
+    .hero-content { padding: 0 1.5rem; }
+    .hero-decor { display: none; }
+  }
+  @media (max-width: 600px) {
+    .hero-btns { flex-direction: column; }
+    .btn-primary, .btn-outline { width: 100%; justify-content: center; }
+  }
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-logo">DKF<span>.</span></div>
+  <ul class="nav-links">
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="apropos.html">À propos</a></li>
+    <li><a href="bts.html">BTS SIO</a></li>
+    <li><a href="e5.html">Épreuve E5</a></li>
+    <li><a href="e6.html">Épreuve E6</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-decor"></div>
+  <div class="hero-content">
+    <h1 class="hero-name">Darelle<br><em>Kamche Fotso</em></h1>
+    <p class="hero-role">// Étudiante BTS SIO · Option SISR</p>
+    <p class="hero-desc">Passionnée par les systèmes, les réseaux et la cybersécurité, je développe mes compétences pour devenir administratrice systèmes et réseaux et évoluer vers la sécurité informatique.</p>
+    <div class="hero-btns">
+      <a href="apropos.html" class="btn-primary">👉 En savoir plus</a>
+      <a href="contact.html" class="btn-outline">👉 Me contacter</a>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

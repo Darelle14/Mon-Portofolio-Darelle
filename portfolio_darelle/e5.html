@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Épreuve E5 — Darelle Kamche Fotso</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .modal-section { padding: 0 4rem 3rem; max-width: 1100px; margin: 0 auto; }
+  .modal-cards { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+  .modal-card {
+    flex: 1; min-width: 260px; background: var(--card-bg);
+    border: 1px solid rgba(255,255,255,0.6); border-radius: 0.8rem;
+    padding: 2rem; box-shadow: var(--shadow);
+  }
+  .modal-time {
+    font-family: 'DM Mono', monospace; font-size: 0.72rem;
+    color: var(--gold); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.5rem;
+  }
+  .modal-card h3 { font-weight: 700; font-size: 1rem; margin-bottom: 0.8rem; }
+  .modal-card p { font-size: 0.85rem; color: var(--muted); line-height: 1.6; }
+
+  .e5-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;
+    padding: 0 4rem 3rem; max-width: 1100px; margin: 0 auto;
+  }
+  .e5-card {
+    background: var(--card-bg); border: 1px solid rgba(255,255,255,0.6);
+    border-radius: 0.8rem; padding: 2rem; box-shadow: var(--shadow); transition: transform 0.25s;
+  }
+  .e5-card:hover { transform: translateY(-4px); }
+  .e5-card h3 { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; margin-bottom: 1rem; }
+  .e5-card ul { list-style: none; }
+  .e5-card ul li {
+    font-size: 0.85rem; color: var(--muted);
+    padding: 0.3rem 0 0.3rem 1.2rem; position: relative; line-height: 1.5;
+  }
+  .e5-card ul li::before { content: '◈'; position: absolute; left: 0; color: var(--teal); font-size: 0.65rem; top: 0.45rem; }
+
+  .docs-section { padding: 0 4rem 3rem; max-width: 1100px; margin: 0 auto; }
+
+  @media (max-width: 900px) {
+    .e5-grid { grid-template-columns: 1fr; padding-left: 1.5rem; padding-right: 1.5rem; }
+    .modal-section, .docs-section { padding-left: 1.5rem; padding-right: 1.5rem; }
+    .modal-cards { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-logo">DKF<span>.</span></div>
+  <ul class="nav-links">
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="apropos.html">À propos</a></li>
+    <li><a href="bts.html">BTS SIO</a></li>
+    <li><a href="e5.html">Épreuve E5</a></li>
+    <li><a href="e6.html">Épreuve E6</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<main>
+  <div class="page-header">
+    <p class="page-label">// Certification</p>
+    <h1 class="page-title">📁 Épreuve E5</h1>
+    <div class="page-line"></div>
+    <p style="color:var(--muted); font-size:0.95rem; max-width:600px; line-height:1.7; margin-bottom:2rem;">Support et mise à disposition de services informatiques — épreuve évaluant ma capacité à gérer un environnement informatique et à fournir des services aux utilisateurs.</p>
+  </div>
+
+  <!-- Modalités -->
+  <div class="modal-section">
+    <h2 class="section-subtitle">🧪 Modalités d'évaluation</h2>
+    <div class="modal-cards">
+      <div class="modal-card">
+        <div class="modal-time">🔹 10 minutes</div>
+        <h3>Présentation</h3>
+        <p>Présentation de mon parcours et des compétences acquises tout au long de ma formation et de mes expériences professionnelles.</p>
+      </div>
+      <div class="modal-card">
+        <div class="modal-time">🔹 30 minutes</div>
+        <h3>Entretien avec le jury</h3>
+        <p>Discussion autour de mes expériences et réalisations professionnelles. Évaluation de ma compréhension, de mon implication et de ma maîtrise technique.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Compétences -->
+  <div style="padding:0 4rem 1.5rem; max-width:1100px; margin:0 auto;">
+    <h2 class="section-subtitle">🧠 Compétences du bloc</h2>
+  </div>
+  <div class="e5-grid">
+    <div class="e5-card">
+      <h3>1. Gestion du patrimoine informatique</h3>
+      <ul>
+        <li>Recensement des équipements</li>
+        <li>Gestion des accès</li>
+        <li>Sauvegardes</li>
+        <li>Continuité de service</li>
+      </ul>
+    </div>
+    <div class="e5-card">
+      <h3>2. Support et assistance</h3>
+      <ul>
+        <li>Gestion des tickets</li>
+        <li>Diagnostic et résolution d'incidents</li>
+        <li>Support utilisateurs</li>
+      </ul>
+    </div>
+    <div class="e5-card">
+      <h3>3. Présence en ligne</h3>
+      <ul>
+        <li>Mise à jour de contenus</li>
+        <li>Participation à un site web</li>
+      </ul>
+    </div>
+    <div class="e5-card">
+      <h3>4. Travail en mode projet</h3>
+      <ul>
+        <li>Analyse des besoins</li>
+        <li>Planification</li>
+        <li>Suivi des actions</li>
+      </ul>
+    </div>
+    <div class="e5-card">
+      <h3>5. Mise à disposition d'un service</h3>
+      <ul>
+        <li>Tests</li>
+        <li>Déploiement</li>
+        <li>Accompagnement utilisateurs</li>
+      </ul>
+    </div>
+    <div class="e5-card">
+      <h3>6. Développement professionnel</h3>
+      <ul>
+        <li>Veille technologique</li>
+        <li>Construction du projet professionnel</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Documents -->
+  <div class="docs-section">
+    <h2 class="section-subtitle">📂 Documents présentés</h2>
+    <div class="doc-items">
+      <div class="doc-item">
+        <div>
+          <div class="doc-name">Tableau de synthèse E5</div>
+          <div class="doc-desc">Document récapitulatif des compétences acquises</div>
+        </div>
+        <button class="btn-upload" onclick="document.getElementById('e5-doc1').click()">📎 Ajouter le fichier</button>
+        <input type="file" id="e5-doc1" accept=".pdf,.doc,.docx" onchange="attachFile(event)">
+      </div>
+      <div class="doc-item">
+        <div>
+          <div class="doc-name">Attestations de stage</div>
+          <div class="doc-desc">Attestations des stages effectués en entreprise</div>
+        </div>
+        <button class="btn-upload" onclick="document.getElementById('e5-doc2').click()">📎 Ajouter le fichier</button>
+        <input type="file" id="e5-doc2" accept=".pdf,.doc,.docx" onchange="attachFile(event)">
+      </div>
+    </div>
+  </div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

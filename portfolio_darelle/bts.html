@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BTS SIO — Darelle Kamche Fotso</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  main { background: var(--ink); color: var(--cream); }
+  .page-label { color: var(--gold-light); }
+  .page-title { color: var(--cream); }
+
+  .bts-intro { padding: 0 4rem 3rem; max-width: 1100px; margin: 0 auto; }
+  .bts-intro p { font-size: 1rem; line-height: 1.8; color: rgba(245,240,232,0.75); margin-bottom: 1rem; }
+
+  .bts-list {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(240px,1fr)); gap: 0.8rem;
+    margin: 1.2rem 0;
+  }
+  .bts-list-item {
+    display: flex; align-items: center; gap: 0.6rem;
+    padding: 0.7rem 1rem;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(201,168,76,0.2); border-radius: 0.4rem;
+    font-size: 0.85rem; color: rgba(245,240,232,0.8);
+  }
+  .bts-list-item::before { content: '◆'; color: var(--gold); font-size: 0.5rem; }
+
+  .options-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;
+    padding: 0 4rem 3rem; max-width: 1100px; margin: 0 auto;
+  }
+  .option-card {
+    padding: 2.5rem; border-radius: 0.8rem;
+    border: 1px solid rgba(201,168,76,0.25);
+    background: rgba(255,255,255,0.04); transition: all 0.3s;
+  }
+  .option-card:hover {
+    background: rgba(255,255,255,0.07);
+    border-color: rgba(201,168,76,0.5);
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  }
+  .option-card.highlight { border-color: var(--gold); background: rgba(201,168,76,0.08); }
+  .option-badge {
+    display: inline-block;
+    font-family: 'DM Mono', monospace; font-size: 0.7rem;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 0.3rem 0.8rem; border-radius: 2rem;
+    background: rgba(201,168,76,0.15); color: var(--gold-light); margin-bottom: 1rem;
+  }
+  .option-badge.active { background: var(--gold); color: var(--ink); }
+  .option-card h3 {
+    font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 700;
+    color: var(--cream); margin-bottom: 1rem;
+  }
+  .option-card p, .option-card li { font-size: 0.85rem; color: rgba(245,240,232,0.7); line-height: 1.7; }
+  .option-card ul { list-style: none; margin: 0.8rem 0; }
+  .option-card ul li { padding: 0.25rem 0 0.25rem 1rem; position: relative; }
+  .option-card ul li::before { content: '–'; position: absolute; left: 0; color: var(--gold); }
+
+  .pourquoi-section { padding: 0 4rem 3rem; max-width: 1100px; margin: 0 auto; }
+  .section-subtitle { color: var(--cream); }
+  .pourquoi-card {
+    background: rgba(201,168,76,0.08);
+    border: 1px solid rgba(201,168,76,0.3);
+    border-radius: 0.8rem; padding: 2rem 2.5rem;
+  }
+  .pourquoi-card p { font-size: 0.95rem; color: rgba(245,240,232,0.8); line-height: 1.8; margin-bottom: 1rem; }
+  .pourquoi-card ul {
+    list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin: 1rem 0;
+  }
+  .pourquoi-card ul li {
+    font-size: 0.85rem; color: rgba(245,240,232,0.75);
+    padding: 0.4rem 0 0.4rem 1.2rem; position: relative;
+  }
+  .pourquoi-card ul li::before {
+    content: '✦'; position: absolute; left: 0;
+    color: var(--gold); font-size: 0.6rem; top: 0.55rem;
+  }
+
+  @media (max-width: 900px) {
+    .bts-intro, .pourquoi-section { padding-left: 1.5rem; padding-right: 1.5rem; }
+    .options-grid { grid-template-columns: 1fr; padding-left: 1.5rem; padding-right: 1.5rem; }
+    .pourquoi-card ul { grid-template-columns: 1fr; }
+    .bts-list { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-logo">DKF<span>.</span></div>
+  <ul class="nav-links">
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="apropos.html">À propos</a></li>
+    <li><a href="bts.html">BTS SIO</a></li>
+    <li><a href="e5.html">Épreuve E5</a></li>
+    <li><a href="e6.html">Épreuve E6</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<main>
+  <div class="page-header">
+    <p class="page-label">// Formation</p>
+    <h1 class="page-title">🎓 Le BTS SIO</h1>
+    <div class="page-line"></div>
+  </div>
+
+  <div class="bts-intro">
+    <h2 class="section-subtitle">❓ Qu'est-ce que le BTS SIO ?</h2>
+    <p>Le BTS SIO (Services Informatiques aux Organisations) est un diplôme national de l'enseignement supérieur en France, de niveau Bac+2. Cette formation forme des professionnels de l'informatique capables d'intervenir dans des environnements variés au sein des organisations.</p>
+    <p>Les étudiants y développent des compétences techniques et professionnelles dans plusieurs domaines :</p>
+    <div class="bts-list">
+      <div class="bts-list-item">Administration systèmes &amp; réseaux</div>
+      <div class="bts-list-item">Développement d'applications</div>
+      <div class="bts-list-item">Gestion de bases de données</div>
+      <div class="bts-list-item">Cybersécurité</div>
+      <div class="bts-list-item">Support &amp; assistance utilisateurs</div>
+      <div class="bts-list-item">Gestion de projet informatique</div>
+    </div>
+  </div>
+
+  <div style="padding:0 4rem; max-width:1100px; margin:0 auto 2rem;">
+    <h2 class="section-subtitle">🔀 Les deux options</h2>
+  </div>
+  <div class="options-grid">
+    <div class="option-card highlight">
+      <div class="option-badge active">Mon option</div>
+      <h3>💻 SISR</h3>
+      <p style="margin-bottom:0.8rem;">Solutions d'Infrastructure, Systèmes et Réseaux — orientée administration des systèmes et des réseaux.</p>
+      <ul>
+        <li>Installer et configurer des équipements réseaux</li>
+        <li>Administrer des serveurs Windows / Linux</li>
+        <li>Assurer la sécurité des infrastructures</li>
+        <li>Maintenir et superviser les systèmes</li>
+        <li>Gérer les accès utilisateurs</li>
+      </ul>
+      <p style="margin-top:1rem; font-size:0.82rem; color:var(--gold-light);">→ Technicien systèmes &amp; réseaux · Administrateur · Support · Pilote d'exploitation</p>
+    </div>
+    <div class="option-card">
+      <div class="option-badge">Option</div>
+      <h3>💻 SLAM</h3>
+      <p style="margin-bottom:0.8rem;">Solutions Logicielles et Applications Métiers — orientée développement d'applications et programmation.</p>
+      <ul>
+        <li>Concevoir et développer des applications</li>
+        <li>Gérer des bases de données</li>
+        <li>Maintenir et faire évoluer des logiciels</li>
+        <li>Participer à des projets de développement</li>
+      </ul>
+      <p style="margin-top:1rem; font-size:0.82rem; color:rgba(245,240,232,0.5);">→ Développeur web · Analyste programmeur · Chargé d'études informatiques</p>
+    </div>
+  </div>
+
+  <div class="pourquoi-section">
+    <h2 class="section-subtitle">🎯 Pourquoi j'ai choisi SISR</h2>
+    <div class="pourquoi-card">
+      <p>J'ai choisi l'option SISR car je suis particulièrement intéressée par le fonctionnement des infrastructures informatiques et des réseaux. J'apprécie le côté concret et technique de cette spécialité.</p>
+      <ul>
+        <li>Installer et configurer des systèmes</li>
+        <li>Gérer des réseaux</li>
+        <li>Sécuriser les infrastructures</li>
+        <li>Intervenir sur des incidents réels</li>
+      </ul>
+      <p>Mes expériences professionnelles ont confirmé ce choix — support utilisateurs, administration Active Directory, serveurs Linux, réseaux d'entreprise. Mon objectif est de devenir <strong style="color:var(--gold-light);">administratrice systèmes et réseaux</strong>, puis d'évoluer vers la <strong style="color:var(--gold-light);">cybersécurité</strong>.</p>
+    </div>
+  </div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
